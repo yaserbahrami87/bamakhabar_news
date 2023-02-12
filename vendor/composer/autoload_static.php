@@ -24,6 +24,7 @@ class ComposerStaticInit5b52f443dde93f9a31b541ee07f439bf
         'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
         '9cdd7b9056abc3081735233ba9dd9c7f' => __DIR__ . '/..' . '/facade/flare-client-php/src/helpers.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
+        '4364d9898253482270d33c3e7d349234' => __DIR__ . '/..' . '/hekmatinasser/notowo/src/helpers.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '538ca81a9a966a6716601ecf48f4eaef' => __DIR__ . '/..' . '/opis/closure/functions.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
@@ -31,12 +32,17 @@ class ComposerStaticInit5b52f443dde93f9a31b541ee07f439bf
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         'ed962a97bd972bc82007176b647d4e36' => __DIR__ . '/..' . '/facade/ignition/src/helpers.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
+        '4ad677cf23be1eeec8c74951804d4cb0' => __DIR__ . '/..' . '/hekmatinasser/verta/src/helpers.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
         'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
     );
 
     public static $prefixLengthsPsr4 = array (
+        'w' => 
+        array (
+            'willvincent\\Feeds\\' => 18,
+        ),
         'v' => 
         array (
             'voku\\' => 5,
@@ -121,6 +127,11 @@ class ComposerStaticInit5b52f443dde93f9a31b541ee07f439bf
             'Illuminate\\Foundation\\Auth\\' => 27,
             'Illuminate\\' => 11,
         ),
+        'H' => 
+        array (
+            'Hekmatinasser\\Verta\\' => 20,
+            'Hekmatinasser\\Notowo\\' => 21,
+        ),
         'G' => 
         array (
             'GuzzleHttp\\Psr7\\' => 16,
@@ -165,6 +176,10 @@ class ComposerStaticInit5b52f443dde93f9a31b541ee07f439bf
     );
 
     public static $prefixDirsPsr4 = array (
+        'willvincent\\Feeds\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/willvincent/feeds/src',
+        ),
         'voku\\' => 
         array (
             0 => __DIR__ . '/..' . '/voku/portable-ascii/src/voku',
@@ -370,6 +385,14 @@ class ComposerStaticInit5b52f443dde93f9a31b541ee07f439bf
         array (
             0 => __DIR__ . '/..' . '/laravel/framework/src/Illuminate',
         ),
+        'Hekmatinasser\\Verta\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/hekmatinasser/verta/src',
+        ),
+        'Hekmatinasser\\Notowo\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/hekmatinasser/notowo/src',
+        ),
         'GuzzleHttp\\Psr7\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
@@ -453,6 +476,13 @@ class ComposerStaticInit5b52f443dde93f9a31b541ee07f439bf
     );
 
     public static $prefixesPsr0 = array (
+        'S' => 
+        array (
+            'SimplePie' => 
+            array (
+                0 => __DIR__ . '/..' . '/simplepie/simplepie/library',
+            ),
+        ),
         'M' => 
         array (
             'Mockery' => 
@@ -463,6 +493,8 @@ class ComposerStaticInit5b52f443dde93f9a31b541ee07f439bf
     );
 
     public static $classMap = array (
+        'App\\Category' => __DIR__ . '/../..' . '/app/Category.php',
+        'App\\Console\\Commands\\deleteNews' => __DIR__ . '/../..' . '/app/Console/Commands/deleteNews.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
@@ -471,8 +503,11 @@ class ComposerStaticInit5b52f443dde93f9a31b541ee07f439bf
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
+        'App\\Http\\Controllers\\CategoryController' => __DIR__ . '/../..' . '/app/Http/Controllers/CategoryController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+        'App\\Http\\Controllers\\NewsController' => __DIR__ . '/../..' . '/app/Http/Controllers/NewsController.php',
+        'App\\Http\\Controllers\\SourceController' => __DIR__ . '/../..' . '/app/Http/Controllers/SourceController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',
@@ -487,6 +522,7 @@ class ComposerStaticInit5b52f443dde93f9a31b541ee07f439bf
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'App\\Source' => __DIR__ . '/../..' . '/app/Source.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'App\\news' => __DIR__ . '/../..' . '/app/news.php',
         'Asm89\\Stack\\Cors' => __DIR__ . '/..' . '/asm89/stack-cors/src/Cors.php',
@@ -1575,6 +1611,23 @@ class ComposerStaticInit5b52f443dde93f9a31b541ee07f439bf
         'Hamcrest\\Type\\IsString' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Type/IsString.php',
         'Hamcrest\\Util' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Util.php',
         'Hamcrest\\Xml\\HasXPath' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php',
+        'Hekmatinasser\\Notowo\\Notowo' => __DIR__ . '/..' . '/hekmatinasser/notowo/src/Notowo.php',
+        'Hekmatinasser\\Notowo\\NotowoServiceProvider' => __DIR__ . '/..' . '/hekmatinasser/notowo/src/NotowoServiceProvider.php',
+        'Hekmatinasser\\Verta\\Facades\\Verta' => __DIR__ . '/..' . '/hekmatinasser/verta/src/Facades/Verta.php',
+        'Hekmatinasser\\Verta\\Laravel\\JalaliValidator' => __DIR__ . '/..' . '/hekmatinasser/verta/src/Laravel/JalaliValidator.php',
+        'Hekmatinasser\\Verta\\Laravel\\VertaServiceProvider' => __DIR__ . '/..' . '/hekmatinasser/verta/src/Laravel/VertaServiceProvider.php',
+        'Hekmatinasser\\Verta\\Traits\\Accessor' => __DIR__ . '/..' . '/hekmatinasser/verta/src/Traits/Accessor.php',
+        'Hekmatinasser\\Verta\\Traits\\Boundaries' => __DIR__ . '/..' . '/hekmatinasser/verta/src/Traits/Boundaries.php',
+        'Hekmatinasser\\Verta\\Traits\\Comparison' => __DIR__ . '/..' . '/hekmatinasser/verta/src/Traits/Comparison.php',
+        'Hekmatinasser\\Verta\\Traits\\Creator' => __DIR__ . '/..' . '/hekmatinasser/verta/src/Traits/Creator.php',
+        'Hekmatinasser\\Verta\\Traits\\Date' => __DIR__ . '/..' . '/hekmatinasser/verta/src/Traits/Date.php',
+        'Hekmatinasser\\Verta\\Traits\\Difference' => __DIR__ . '/..' . '/hekmatinasser/verta/src/Traits/Difference.php',
+        'Hekmatinasser\\Verta\\Traits\\Formatting' => __DIR__ . '/..' . '/hekmatinasser/verta/src/Traits/Formatting.php',
+        'Hekmatinasser\\Verta\\Traits\\Modification' => __DIR__ . '/..' . '/hekmatinasser/verta/src/Traits/Modification.php',
+        'Hekmatinasser\\Verta\\Traits\\Transformation' => __DIR__ . '/..' . '/hekmatinasser/verta/src/Traits/Transformation.php',
+        'Hekmatinasser\\Verta\\Traits\\Translator' => __DIR__ . '/..' . '/hekmatinasser/verta/src/Traits/Translator.php',
+        'Hekmatinasser\\Verta\\Verta' => __DIR__ . '/..' . '/hekmatinasser/verta/src/Verta.php',
+        'Hekmatinasser\\Verta\\VertaInterface' => __DIR__ . '/..' . '/hekmatinasser/verta/src/VertaInterface.php',
         'Illuminate\\Auth\\Access\\AuthorizationException' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Auth/Access/AuthorizationException.php',
         'Illuminate\\Auth\\Access\\Gate' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Auth/Access/Gate.php',
         'Illuminate\\Auth\\Access\\HandlesAuthorization' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Auth/Access/HandlesAuthorization.php',
@@ -4227,6 +4280,41 @@ class ComposerStaticInit5b52f443dde93f9a31b541ee07f439bf
         'SebastianBergmann\\Type\\UnknownType' => __DIR__ . '/..' . '/sebastian/type/src/type/UnknownType.php',
         'SebastianBergmann\\Type\\VoidType' => __DIR__ . '/..' . '/sebastian/type/src/type/VoidType.php',
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
+        'SimplePie' => __DIR__ . '/..' . '/simplepie/simplepie/library/SimplePie.php',
+        'SimplePie_Author' => __DIR__ . '/..' . '/simplepie/simplepie/library/SimplePie/Author.php',
+        'SimplePie_Cache' => __DIR__ . '/..' . '/simplepie/simplepie/library/SimplePie/Cache.php',
+        'SimplePie_Cache_Base' => __DIR__ . '/..' . '/simplepie/simplepie/library/SimplePie/Cache/Base.php',
+        'SimplePie_Cache_DB' => __DIR__ . '/..' . '/simplepie/simplepie/library/SimplePie/Cache/DB.php',
+        'SimplePie_Cache_File' => __DIR__ . '/..' . '/simplepie/simplepie/library/SimplePie/Cache/File.php',
+        'SimplePie_Cache_Memcache' => __DIR__ . '/..' . '/simplepie/simplepie/library/SimplePie/Cache/Memcache.php',
+        'SimplePie_Cache_Memcached' => __DIR__ . '/..' . '/simplepie/simplepie/library/SimplePie/Cache/Memcached.php',
+        'SimplePie_Cache_MySQL' => __DIR__ . '/..' . '/simplepie/simplepie/library/SimplePie/Cache/MySQL.php',
+        'SimplePie_Cache_Redis' => __DIR__ . '/..' . '/simplepie/simplepie/library/SimplePie/Cache/Redis.php',
+        'SimplePie_Caption' => __DIR__ . '/..' . '/simplepie/simplepie/library/SimplePie/Caption.php',
+        'SimplePie_Category' => __DIR__ . '/..' . '/simplepie/simplepie/library/SimplePie/Category.php',
+        'SimplePie_Content_Type_Sniffer' => __DIR__ . '/..' . '/simplepie/simplepie/library/SimplePie/Content/Type/Sniffer.php',
+        'SimplePie_Copyright' => __DIR__ . '/..' . '/simplepie/simplepie/library/SimplePie/Copyright.php',
+        'SimplePie_Core' => __DIR__ . '/..' . '/simplepie/simplepie/library/SimplePie/Core.php',
+        'SimplePie_Credit' => __DIR__ . '/..' . '/simplepie/simplepie/library/SimplePie/Credit.php',
+        'SimplePie_Decode_HTML_Entities' => __DIR__ . '/..' . '/simplepie/simplepie/library/SimplePie/Decode/HTML/Entities.php',
+        'SimplePie_Enclosure' => __DIR__ . '/..' . '/simplepie/simplepie/library/SimplePie/Enclosure.php',
+        'SimplePie_Exception' => __DIR__ . '/..' . '/simplepie/simplepie/library/SimplePie/Exception.php',
+        'SimplePie_File' => __DIR__ . '/..' . '/simplepie/simplepie/library/SimplePie/File.php',
+        'SimplePie_HTTP_Parser' => __DIR__ . '/..' . '/simplepie/simplepie/library/SimplePie/HTTP/Parser.php',
+        'SimplePie_IRI' => __DIR__ . '/..' . '/simplepie/simplepie/library/SimplePie/IRI.php',
+        'SimplePie_Item' => __DIR__ . '/..' . '/simplepie/simplepie/library/SimplePie/Item.php',
+        'SimplePie_Locator' => __DIR__ . '/..' . '/simplepie/simplepie/library/SimplePie/Locator.php',
+        'SimplePie_Misc' => __DIR__ . '/..' . '/simplepie/simplepie/library/SimplePie/Misc.php',
+        'SimplePie_Net_IPv6' => __DIR__ . '/..' . '/simplepie/simplepie/library/SimplePie/Net/IPv6.php',
+        'SimplePie_Parse_Date' => __DIR__ . '/..' . '/simplepie/simplepie/library/SimplePie/Parse/Date.php',
+        'SimplePie_Parser' => __DIR__ . '/..' . '/simplepie/simplepie/library/SimplePie/Parser.php',
+        'SimplePie_Rating' => __DIR__ . '/..' . '/simplepie/simplepie/library/SimplePie/Rating.php',
+        'SimplePie_Registry' => __DIR__ . '/..' . '/simplepie/simplepie/library/SimplePie/Registry.php',
+        'SimplePie_Restriction' => __DIR__ . '/..' . '/simplepie/simplepie/library/SimplePie/Restriction.php',
+        'SimplePie_Sanitize' => __DIR__ . '/..' . '/simplepie/simplepie/library/SimplePie/Sanitize.php',
+        'SimplePie_Source' => __DIR__ . '/..' . '/simplepie/simplepie/library/SimplePie/Source.php',
+        'SimplePie_XML_Declaration_Parser' => __DIR__ . '/..' . '/simplepie/simplepie/library/SimplePie/XML/Declaration/Parser.php',
+        'SimplePie_gzdecode' => __DIR__ . '/..' . '/simplepie/simplepie/library/SimplePie/gzdecode.php',
         'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
         'Symfony\\Component\\Console\\Application' => __DIR__ . '/..' . '/symfony/console/Application.php',
         'Symfony\\Component\\Console\\Attribute\\AsCommand' => __DIR__ . '/..' . '/symfony/console/Attribute/AsCommand.php',
@@ -5050,6 +5138,9 @@ class ComposerStaticInit5b52f443dde93f9a31b541ee07f439bf
         'Whoops\\Util\\SystemFacade' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/SystemFacade.php',
         'Whoops\\Util\\TemplateHelper' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/TemplateHelper.php',
         'voku\\helper\\ASCII' => __DIR__ . '/..' . '/voku/portable-ascii/src/voku/helper/ASCII.php',
+        'willvincent\\Feeds\\Facades\\FeedsFacade' => __DIR__ . '/..' . '/willvincent/feeds/src/Facades/FeedsFacade.php',
+        'willvincent\\Feeds\\FeedsFactory' => __DIR__ . '/..' . '/willvincent/feeds/src/FeedsFactory.php',
+        'willvincent\\Feeds\\FeedsServiceProvider' => __DIR__ . '/..' . '/willvincent/feeds/src/FeedsServiceProvider.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

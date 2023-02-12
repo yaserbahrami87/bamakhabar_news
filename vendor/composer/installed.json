@@ -1393,6 +1393,135 @@
             "install-path": "../hamcrest/hamcrest-php"
         },
         {
+            "name": "hekmatinasser/notowo",
+            "version": "v1.0.1",
+            "version_normalized": "1.0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hekmatinasser/notowo.git",
+                "reference": "c51ad5dcedac966dd93ce558ac7e6a84e0020d6d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hekmatinasser/notowo/zipball/c51ad5dcedac966dd93ce558ac7e6a84e0020d6d",
+                "reference": "c51ad5dcedac966dd93ce558ac7e6a84e0020d6d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5"
+            },
+            "time": "2017-09-22T13:41:16+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Hekmatinasser\\Notowo\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nasser Hekmati",
+                    "email": "hekmati.nasser@gmail.com"
+                }
+            ],
+            "description": "This Package helps developers change number to word for all language on Laravel freamwork PHP",
+            "keywords": [
+                "Notowo",
+                "laravel",
+                "n2w",
+                "number",
+                "word"
+            ],
+            "support": {
+                "issues": "https://github.com/hekmatinasser/notowo/issues",
+                "source": "https://github.com/hekmatinasser/notowo/tree/v1.0.1"
+            },
+            "install-path": "../hekmatinasser/notowo"
+        },
+        {
+            "name": "hekmatinasser/verta",
+            "version": "v2.1.1",
+            "version_normalized": "2.1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hekmatinasser/verta.git",
+                "reference": "8659810fce313f49fd4f665ca9fb05a371aa6da7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hekmatinasser/verta/zipball/8659810fce313f49fd4f665ca9fb05a371aa6da7",
+                "reference": "8659810fce313f49fd4f665ca9fb05a371aa6da7",
+                "shasum": ""
+            },
+            "require": {
+                "hekmatinasser/notowo": "^1.0",
+                "illuminate/support": "^6.0|^7.0|^8.0|^9.0",
+                "illuminate/validation": "^6.0|^7.0|^8.0|^9.0",
+                "php": "^7.3|^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^4.18|^5.20|^6.24|^7.0"
+            },
+            "time": "2022-04-11T07:22:34+00:00",
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Hekmatinasser\\Verta\\Laravel\\VertaServiceProvider"
+                    ],
+                    "aliases": {
+                        "Verta": "Hekmatinasser\\Verta\\Verta"
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Hekmatinasser\\Verta\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nasser Hekmati",
+                    "email": "hekmati.nasser@gmail.com"
+                }
+            ],
+            "description": "This Package helps developers to work with Jalali Datetime class for Laravel Framework PHP",
+            "keywords": [
+                "Jalali",
+                "Verta",
+                "date",
+                "datetime",
+                "laravel",
+                "shamsi"
+            ],
+            "support": {
+                "issues": "https://github.com/hekmatinasser/verta/issues",
+                "source": "https://github.com/hekmatinasser/verta/tree/v2.1.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/hekmatinasser",
+                    "type": "github"
+                }
+            ],
+            "install-path": "../hekmatinasser/verta"
+        },
+        {
             "name": "laravel/framework",
             "version": "v7.30.6",
             "version_normalized": "7.30.6.0",
@@ -3037,17 +3166,17 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "9.6.0",
-            "version_normalized": "9.6.0.0",
+            "version": "9.6.1",
+            "version_normalized": "9.6.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "70fc8be1d0b9fad56a199a4df5f9cfabfc246f84"
+                "reference": "9a52e8385f3e432d7e8ecab72c4d211a67223285"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/70fc8be1d0b9fad56a199a4df5f9cfabfc246f84",
-                "reference": "70fc8be1d0b9fad56a199a4df5f9cfabfc246f84",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/9a52e8385f3e432d7e8ecab72c4d211a67223285",
+                "reference": "9a52e8385f3e432d7e8ecab72c4d211a67223285",
                 "shasum": ""
             },
             "require": {
@@ -3083,7 +3212,7 @@
                 "ext-soap": "*",
                 "ext-xdebug": "*"
             },
-            "time": "2023-02-03T07:32:24+00:00",
+            "time": "2023-02-03T19:31:30+00:00",
             "bin": [
                 "phpunit"
             ],
@@ -3122,7 +3251,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.6.0"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.6.1"
             },
             "funding": [
                 {
@@ -4840,6 +4969,80 @@
                 }
             ],
             "install-path": "../sebastian/version"
+        },
+        {
+            "name": "simplepie/simplepie",
+            "version": "1.5.8",
+            "version_normalized": "1.5.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/simplepie/simplepie.git",
+                "reference": "d1d80f37264c9f1ed7fa3434eca14d179cb689b1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/simplepie/simplepie/zipball/d1d80f37264c9f1ed7fa3434eca14d179cb689b1",
+                "reference": "d1d80f37264c9f1ed7fa3434eca14d179cb689b1",
+                "shasum": ""
+            },
+            "require": {
+                "ext-pcre": "*",
+                "ext-xml": "*",
+                "ext-xmlreader": "*",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "yoast/phpunit-polyfills": "^1.0.1"
+            },
+            "suggest": {
+                "ext-curl": "",
+                "ext-iconv": "",
+                "ext-intl": "",
+                "ext-mbstring": "",
+                "mf2/mf2": "Microformat module that allows for parsing HTML for microformats"
+            },
+            "time": "2021-12-24T02:53:50+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-0": {
+                    "SimplePie": "library"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ryan Parman",
+                    "homepage": "http://ryanparman.com/",
+                    "role": "Creator, alumnus developer"
+                },
+                {
+                    "name": "Sam Sneddon",
+                    "homepage": "https://gsnedders.com/",
+                    "role": "Alumnus developer"
+                },
+                {
+                    "name": "Ryan McCue",
+                    "email": "me@ryanmccue.info",
+                    "homepage": "http://ryanmccue.info/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A simple Atom/RSS parsing library for PHP",
+            "homepage": "http://simplepie.org/",
+            "keywords": [
+                "atom",
+                "feeds",
+                "rss"
+            ],
+            "support": {
+                "issues": "https://github.com/simplepie/simplepie/issues",
+                "source": "https://github.com/simplepie/simplepie/tree/1.5.8"
+            },
+            "install-path": "../simplepie/simplepie"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -7475,6 +7678,62 @@
                 }
             ],
             "install-path": "../voku/portable-ascii"
+        },
+        {
+            "name": "willvincent/feeds",
+            "version": "v2.3.0",
+            "version_normalized": "2.3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/willvincent/feeds.git",
+                "reference": "ac46ca2b3337a12846c71afab970d947de0ff32c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/willvincent/feeds/zipball/ac46ca2b3337a12846c71afab970d947de0ff32c",
+                "reference": "ac46ca2b3337a12846c71afab970d947de0ff32c",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "illuminate/support": "~5.0 || ^6.0 || ^7.0 || ^8.0|^9.0",
+                "php": ">=5.4.0 || ^7.2",
+                "simplepie/simplepie": "1.5.*"
+            },
+            "time": "2022-03-08T17:42:52+00:00",
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "willvincent\\Feeds\\FeedsServiceProvider"
+                    ],
+                    "aliases": {
+                        "Feeds": "willvincent\\Feeds\\Facades\\FeedsFacade"
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "willvincent\\Feeds\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Will Vincent",
+                    "email": "tcindie@gmail.com"
+                }
+            ],
+            "description": "Laravel 5 Service Provider for the SimplePie library",
+            "support": {
+                "issues": "https://github.com/willvincent/feeds/issues",
+                "source": "https://github.com/willvincent/feeds/tree/v2.3.0"
+            },
+            "install-path": "../willvincent/feeds"
         }
     ],
     "dev": true,
