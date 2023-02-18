@@ -14,16 +14,27 @@ class NewsController extends Controller
      */
     public function index()
     {
-        $feed =\Feeds::make('https://www.tabnak.ir/fa/rss/1/19',true);
+        $feed =\Feeds::make('https://jamejamonline.ir/fa/rss/17',true);
         $data = array(
             'title'     => $feed->get_title(),
             'permalink' => $feed->get_permalink(),
             'items'     => $feed->get_items(),
         );
         foreach ($data['items'] as $datum) {
-            dd($datum->get_title());
+            $news=news::where('title','=',$datum->get_title())
+                            ->get();
+            if($news->count()==0)
+            {
+                news::create([
+                    'title'         =>$datum->get_title(),
+                    'shortlink'     =>$datum->get_title(),
+                    'link_source'   =>$datum->get_permalink(),
+                    'img_thumbnail' =>$datum->get_enclosures()[0]->link,
+                ]);
+            }
+
         }
-        dd($data['items'][0]->get_enclosures()[0]->link);
+//        dd($data['items'][0]->get_enclosures()[0]->link);
 //        dd($feed);
     }
 
