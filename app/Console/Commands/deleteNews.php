@@ -56,6 +56,8 @@ class deleteNews extends Command
                     'shortlink'     =>$datum->get_title(),
                     'link_source'   =>$datum->get_permalink(),
                     'img_thumbnail' =>$datum->get_enclosures()[0]->link,
+                    'date_fa'       =>verta()->formatJalaliDate(),
+                    'time_fa'       =>verta()->formatTime(),
                 ]);
             }
 
