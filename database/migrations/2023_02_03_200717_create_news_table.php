@@ -27,7 +27,7 @@ class CreateNewsTable extends Migration
             $table->text('link_source')->nullable();
             $table->string('date_source',50)->nullable();
             $table->string('date_fa',11)->nullable();
-            $table->string('time_fa',6)->nullable();
+            $table->string('time_fa',10)->nullable();
             $table->boolean('status')->default(1);
             $table->timestamps();
         });
