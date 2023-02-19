@@ -14,15 +14,19 @@ class NewsController extends Controller
      */
     public function index()
     {
-        $feed =\Feeds::make('https://jamejamonline.ir/fa/rss/17',true);
+//        $feed =\Feeds::make('https://jamejamonline.ir/fa/rss/17',true);
+//        $feed =\Feeds::make('https://www.farsnews.ir/rss/social',true);
+        $feed =\Feeds::make('https://www.mehrnews.com/rss/tp/6',true);
         $data = array(
             'title'     => $feed->get_title(),
             'permalink' => $feed->get_permalink(),
             'items'     => $feed->get_items(),
         );
         foreach ($data['items'] as $datum) {
+
             $news=news::where('title','=',$datum->get_title())
                             ->get();
+
             if($news->count()==0)
             {
                 news::create([
@@ -30,6 +34,7 @@ class NewsController extends Controller
                     'shortlink'     =>$datum->get_title(),
                     'link_source'   =>$datum->get_permalink(),
                     'img_thumbnail' =>$datum->get_enclosures()[0]->link,
+                    'description'   =>$datum->get_description(),
                 ]);
             }
 

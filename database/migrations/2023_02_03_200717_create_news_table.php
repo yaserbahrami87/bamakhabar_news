@@ -17,7 +17,7 @@ class CreateNewsTable extends Migration
             $table->id();
             $table->string('title',200)->nullable();
             $table->string('shortlink',200)->unique();
-            $table->string('description',200)->nullable();
+            $table->text('description')->nullable();
             $table->text('content')->nullable();
             $table->string('img_thumbnail',200)->nullable();
             $table->unsignedBigInteger('category_id')->nullable();

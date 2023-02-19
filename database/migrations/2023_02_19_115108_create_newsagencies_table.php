@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSourcesTable extends Migration
+class CreateNewsagenciesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,11 @@ class CreateSourcesTable extends Migration
      */
     public function up()
     {
-        Schema::create('sources', function (Blueprint $table) {
+        Schema::create('newsagencies', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('newsagency_id')->nullable();
-            $table->string('last_update',200)->nullable();
+            $table->string('newsagency',30)->unique();
             $table->boolean('status')->default(1);
             $table->timestamps();
-
-
         });
     }
 
@@ -31,6 +28,6 @@ class CreateSourcesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sources');
+        Schema::dropIfExists('newsagencies');
     }
 }

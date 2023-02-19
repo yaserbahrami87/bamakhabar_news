@@ -21,6 +21,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/news/store_auto','SourceController@store_auto');
 Route::resource('news','NewsController');
 Route::get('/test',function()
 {
