@@ -77,7 +77,8 @@ class NewsController extends Controller
      */
     public function show(news $news)
     {
-        //
+        return view('single')
+                ->with('news',$news);
     }
 
     /**
