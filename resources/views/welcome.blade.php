@@ -12,7 +12,7 @@
                             @if(is_null($item->image))
                                 <img src="{{asset('/images/news/noImage.jpg')}}"  class="align-self-top mr-3" title="{{$item->title}}" alt="{{$item->title}}" width="130px" height="65px" />
                             @else
-                                <img src="{{$item->image}}"  class="align-self-top mr-3" title="{{$item->title}}" alt="{{$item->title}}" width="130px" height="65px" />
+                                <img src="{{$item->img_thumbnail}}"  class="align-self-top mr-3" title="{{$item->title}}" alt="{{$item->title}}" width="130px" height="65px" />
                             @endif
                         </a>
                         <div class="media-body ">
