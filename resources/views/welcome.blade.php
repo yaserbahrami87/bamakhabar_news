@@ -1,11 +1,13 @@
 @extends('master.index')
 @section('content')
+    @foreach($categories as $category)
     <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
         <div class="card">
-            <a href="/category/سیاسی">سیاسی</a>
+            <a href="/category/{{$category->category}}">{{$category->category}}</a>
             <div class="header_news col-12"></div>
 
-            @foreach ($news as $item)
+            @foreach ($category->news->take(12) as $item)
+
                 <article class="col-12 p-0">
                     <div class="media">
                         <a href="/news/{{$item->shortlink}}"  title="{{$item->title}}">
@@ -29,18 +31,19 @@
                                     <li class="fa fa-eye"></li>
                                 </div>
                                 <div class="col-12  col-sm-4 col-md-12 col-lg-4 col-xl-4">
-                                    <a href="/agencies/{{$item->source_id}}">{{$item->source_id}}</a>
+                                    <a href="/newsagency/{{$item->source->newsAgancy->newsagency}}">{{$item->source->newsAgancy->newsagency}}</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </article>
             @endforeach
-            <a class="btn btn-primary btn-lg btn-block" href="/category/سیاسی" role="button">آرشیو اخبار سیاسی</a>
+            <a class="btn btn-primary btn-lg btn-block" href="/category/{{$category->category}}" role="button">آرشیو اخبار {{$category->category}}</a>
         </div>
         <div class="card" >
             <div id='mediaad-qpMn'></div>
         </div>
     </div>
+    @endforeach
 
 @endsection

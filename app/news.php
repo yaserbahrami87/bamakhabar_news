@@ -14,4 +14,14 @@ class news extends Model
     {
         return 'shortlink';
     }
+
+    public function category()
+    {
+        return $this->belongsTo('App\Category');
+    }
+
+    public function source()
+    {
+        return $this->belongsTo('App\Source');
+    }
 }

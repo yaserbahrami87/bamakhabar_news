@@ -14,4 +14,9 @@ class Source extends Model
     {
         return $this->belongsTo('App\newsagency','newsagency_id','id');
     }
+
+    public function news()
+    {
+        return $this->hasMany('App\news');
+    }
 }

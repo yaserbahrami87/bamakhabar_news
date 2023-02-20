@@ -27,4 +27,6 @@ Route::get('/test',function()
 });
 
 
+Route::resource('newsagency','NewsagencyController');
+
 

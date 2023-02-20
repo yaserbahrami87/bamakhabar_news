@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\news;
 use Illuminate\Http\Request;
 
@@ -17,7 +18,14 @@ class IndexController extends Controller
         $news=news::orderby('id','desc')
             ->limit(12)
             ->get();
+
+        $categories=Category::where('status','=',1)
+                    ->get();
+
+
+
         return view('welcome')
+            ->with('categories',$categories)
             ->with('news',$news);
     }
 
