@@ -11,7 +11,7 @@
                 <article class="col-12 p-0">
                     <div class="media">
                         <a href="/news/{{$item->shortlink}}"  title="{{$item->title}}">
-                            @if(is_null($item->image))
+                            @if(is_null($item->img_thumbnail))
                                 <img src="{{asset('/images/news/noImage.jpg')}}"  class="align-self-top mr-3" title="{{$item->title}}" alt="{{$item->title}}" width="130px" height="65px" />
                             @else
                                 <img src="{{$item->img_thumbnail}}"  class="align-self-top mr-3" title="{{$item->title}}" alt="{{$item->title}}" width="130px" height="65px" />
