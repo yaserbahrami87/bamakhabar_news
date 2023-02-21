@@ -124,4 +124,6 @@ class SourceController extends Controller
 //        dd($data['items'][0]->get_enclosures()[0]->link);
 //        dd($feed);
     }
+
+
 }

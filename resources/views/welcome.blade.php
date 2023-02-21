@@ -40,9 +40,11 @@
             @endforeach
             <a class="btn btn-primary btn-lg btn-block" href="/category/{{$category->category}}" role="button">آرشیو اخبار {{$category->category}}</a>
         </div>
+        <!--
         <div class="card" >
             <div id='mediaad-qpMn'></div>
         </div>
+        -->
     </div>
     @endforeach
 

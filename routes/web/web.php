@@ -19,6 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/repair_shortlink','NewsController@repair_shortlink');
 Route::get('/news/store_auto','SourceController@store_auto');
 Route::resource('news','NewsController');
 Route::get('/test',function()

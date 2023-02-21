@@ -114,4 +114,16 @@ class NewsController extends Controller
     {
         //
     }
+
+    public function repair_shortlink()
+    {
+        $news=news::where('shortlink','like',"%/%")
+                ->get();
+        foreach ($news as $item)
+        {
+            $item->shortlink=str_replace('/','-',$item->shortlink);
+            $item->save();
+        }
+        return "$news->count() LINK OK";
+    }
 }
