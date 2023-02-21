@@ -115,6 +115,19 @@ class NewsController extends Controller
         //
     }
 
+    public function search(Request $request)
+    {
+        $this->validate($request,[
+            'q' =>'required|string',
+        ]);
+       $news=news::orwhere('title','like',"%$request->q%")
+                ->orwhere('content','like',"%$request->q%")
+                ->paginate();
+       return view('search')
+                    ->with('news',$news)
+                    ->with('search',$request->q);
+    }
+
     public function repair_shortlink()
     {
         $news=news::where('shortlink','like',"%/%")
