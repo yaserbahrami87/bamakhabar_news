@@ -112,6 +112,7 @@ class SourceController extends Controller
                         'link_source'   =>$datum->get_permalink(),
                         'img_thumbnail' =>$datum->get_enclosures()[0]->link,
                         'description'   =>$datum->get_description(),
+                        'date_source'   =>$datum->get_date(),
                         'category_id'   =>$source->category_id,
                         'source_id'     =>$source->id,
                         'date_fa'       =>verta()->formatJalaliDate(),

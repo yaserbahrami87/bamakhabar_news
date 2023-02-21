@@ -44,7 +44,7 @@
         </li>
 
       </ul>
-      <form class="form-inline my-2 my-lg-0" method="get" action="search">
+      <form class="form-inline my-2 my-lg-0" method="get" action="/search">
         <div class="input-group">
           @if($errors->has('q'))
             {{$errors->first('q')}}

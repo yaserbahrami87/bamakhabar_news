@@ -142,7 +142,7 @@ class NewsController extends Controller
 
     public function test_link()
     {
-        $feed =\Feeds::make("https://www.tasnimnews.com/fa/rss/feed/0/7/1/%D8%B3%DB%8C%D8%A7%D8%B3%DB%8C",true);
+        $feed =\Feeds::make("https://www.irna.ir/rss/tp/20",true);
         $data = array(
             'title'     => $feed->get_title(),
             'permalink' => $feed->get_permalink(),
@@ -153,7 +153,7 @@ class NewsController extends Controller
 
             $news=news::where('title','=',$datum->get_title())
                 ->get();
-            dd($datum->get_description());
+            dd($datum->get_date());
 
             if($news->count()==0)
             {
