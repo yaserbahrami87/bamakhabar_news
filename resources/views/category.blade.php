@@ -1,0 +1,77 @@
+@extends('master.index')
+@section('content')
+    <div class="col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9" id="categoryNews">
+        <div class="card">
+            <a href="/category/{{$category->category}}">{{$category->category}}</a>
+            <div class="header_news col-12"></div>
+            <div class="row">
+                @foreach($category->news()->paginate(12) as $item)
+
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 mb-3">
+                        <div class="card h-100">
+                            @if(is_null($item->img_thumbnail))
+                                <img src="{{asset('/images/news/noImage.jpg')}}" class="card-img-top" alt="...">
+                            @else
+                                <img src="{{$item->img_thumbnail}}" class="card-img-top" alt="{{$item->title}}">
+                            @endif
+                            <div class="card-body">
+                                <a href="/news/{{$item->shortlink}}">
+                                    <h5 class="card-title">{{$item->title}}</h5>
+                                </a>
+                                <!-- <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">{{$item->date}} پیش</small>
+                                <a href="/agencies/{{$item->source->newsAgancy->newsagency}}">  <small class="text-muted">{{$item->source->newsAgancy->newsagency}}  </small> </a>
+
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div id='mediaad-BrUF'></div>
+            </div>
+            <div class="col-12">
+                <!-- Pagination -->
+                {{$category->news()->paginate(12)->links()}}
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+        <div class="col-12" id="mostViewsCat">
+            <div class="card">
+                <a href="/category/{{$category->category}}">پربازدیدهای  {{$category->category}}</a>
+                <div class="header_news col-12"></div>
+{{--                @foreach ($dataViews as $item)--}}
+{{--                    <?php--}}
+{{--                    $images=explode(",",$item->images);--}}
+{{--                    ?>--}}
+{{--                    <article class="col-12 p-0">--}}
+{{--                        <div class="media">--}}
+{{--                            <img src="{{asset('/images/news/'.$images[1])}}"  class="align-self-top mr-3" alt="..." width="130px" height="65px" />--}}
+{{--                            <div class="media-body ">--}}
+{{--                                <h2 class="mt-0">--}}
+{{--                                    <a href="/news/{{$item->shortlink}}" title="{{$item->title}}" >{{$item->title}}</a>--}}
+{{--                                </h2>--}}
+{{--                                <div class="row">--}}
+{{--                                    <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">--}}
+{{--                                        <p class="d-inline">{{$item->date}}قبل</p>--}}
+{{--                                        <li class="fas fa-clock"></li>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">--}}
+{{--                                        <p class="d-inline"> {{$item->views}}</p>--}}
+{{--                                        <li class="fa fa-eye"></li>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </article>--}}
+{{--                @endforeach--}}
+            </div>
+        </div>
+
+    </div>
+@endsection

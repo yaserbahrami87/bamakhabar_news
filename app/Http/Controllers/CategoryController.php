@@ -46,7 +46,9 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        //
+
+        return view('category')
+                ->with('category',$category);
     }
 
     /**

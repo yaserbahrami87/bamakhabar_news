@@ -20,6 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/repair_shortlink','NewsController@repair_shortlink');
+Route::get('/test_link','NewsController@test_link');
 Route::get('/news/store_auto','SourceController@store_auto');
 Route::resource('news','NewsController');
 Route::get('/test',function()
@@ -29,5 +30,6 @@ Route::get('/test',function()
 
 
 Route::resource('newsagency','NewsagencyController');
+Route::resource('category','CategoryController');
 
 

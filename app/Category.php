@@ -14,4 +14,9 @@ class Category extends Model
     {
         return $this->hasMany('App\news')->orderBy('id','desc');
     }
+
+    public function getRouteKeyName()
+    {
+        return 'category';
+    }
 }
