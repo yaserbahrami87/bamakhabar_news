@@ -124,6 +124,6 @@ class NewsController extends Controller
             $item->shortlink=str_replace('/','-',$item->shortlink);
             $item->save();
         }
-        return "$news->count() LINK OK";
+        return $news->count()." LINK OK";
     }
 }
