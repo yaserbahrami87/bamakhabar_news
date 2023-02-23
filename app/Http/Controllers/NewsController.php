@@ -154,6 +154,15 @@ class NewsController extends Controller
 
             $news=news::where('title','=',$datum->get_title())
                 ->get();
+            dd($datum->get_enclosures()[0]->link);
+            if($datum->get_enclosures()[0]->link)
+            {
+                $file=$datum->get_enclosures()[0]->link;
+                $personal_image="personal-".time().".".$datum->get_enclosures()[0]->link->extension();
+                $path=public_path('/documents/users/');
+                $files=$request->file('personal_image')->move($path, $personal_image);
+                $request->personal_image=$personal_image;
+            }
             dd($datum->get_date());
 
             if($news->count()==0)

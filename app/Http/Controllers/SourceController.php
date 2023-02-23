@@ -89,7 +89,8 @@ class SourceController extends Controller
 
 //        $feed =\Feeds::make('https://jamejamonline.ir/fa/rss/17',true);
 //        $feed =\Feeds::make('https://www.farsnews.ir/rss/social',true);
-        $sources=Source::get();
+        $sources=Source::where('status','=',1)
+                ->get();
         foreach ($sources as $source)
         {
             $feed =\Feeds::make($source->link,true);
