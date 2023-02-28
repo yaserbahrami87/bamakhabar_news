@@ -1,4 +1,10 @@
 @extends('master.index')
+@section('title')اخبار{{$category->category}} باماخبر@endsection
+
+
+@section('description')اخبار{{$category->category}} باماخبر که سایت هوشمند خبری است که دارای موتور جستجوگر اینترنتی هوشمند است و میتوانید آخرین اخبار جمع آوری شده از سایت های خبری را در آن ببینید@endsection
+
+
 @section('content')
     <div class="col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9" id="categoryNews">
         <div class="card">
@@ -22,7 +28,7 @@
                             </div>
                             <div class="card-footer">
                                 <small class="text-muted">{{$item->date}} پیش</small>
-                                <a href="/agencies/{{$item->source->newsAgancy->newsagency}}">  <small class="text-muted">{{$item->source->newsAgancy->newsagency}}  </small> </a>
+                                <a href="/newsagency/{{$item->source->newsAgancy->newsagency}}">  <small class="text-muted">{{$item->source->newsAgancy->newsagency}}  </small> </a>
 
                             </div>
                         </div>

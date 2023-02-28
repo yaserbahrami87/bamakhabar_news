@@ -1,4 +1,7 @@
 @extends('master.index')
+@section('title')
+    نتایج جستجوی {{$search}} در باماخبر
+@endsection
 @section('content')
     <div class="col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9" id="categoryNews">
         <div class="card">
@@ -6,7 +9,6 @@
             <div class="header_news col-12"></div>
             <div class="row">
                 @foreach($news as $item)
-
                     <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 mb-3">
                         <div class="card h-100">
                             <img src="{{$item->img_thumbnail}}" class="card-img-top" alt="...">
@@ -17,8 +19,7 @@
                             </div>
                             <div class="card-footer">
                                 <small class="text-muted">{{$item->date}} پیش</small>
-                                <a href="/agencies/{{$item->source->newsAgancy->newsagency}}">  <small class="text-muted">{{$item->source->newsAgancy->newsagency}}  </small> </a>
-
+                                <a href="/newsagency/{{$item->source->newsAgancy->newsagency}}">  <small class="text-muted">{{$item->source->newsAgancy->newsagency}}  </small> </a>
                             </div>
                         </div>
                     </div>

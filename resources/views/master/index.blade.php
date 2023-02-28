@@ -4,10 +4,10 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="باماخبر سایت هوشمند خبری است که دارای موتور جستجوگر اینترنتی هوشمند است و میتوانید آخرین اخبار جمع آوری شده از سایت های خبری را در آن ببینید"/>
+    <meta name="description" content="@yield('description')"/>
     <meta name="keywords" content="خبر فوری,خبر,اخبار,آخرین اخبار,خبرخوان,جستجوگر خبر,تازه ترین اخبار,جستجوگر اخبار,اخبار ایران,اخبار ورزشی,اخبار اقتصادی,اخبار سیاسی,باماخبر,باما خبر" />
 
-    <title>سایت</title>
+    <title>@yield('title')</title>
     <!-- Bootstrap CSS -->
     <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('css/bootstrap-rtl.min.css')}}" rel="stylesheet" />

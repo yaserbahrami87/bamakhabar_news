@@ -1,4 +1,9 @@
 @extends('master.index')
+
+@section('title')    باماخبر موتور جستجوگر اخبار اینترنتی@endsection
+
+@section('description')   باماخبر سایت هوشمند خبری است که دارای موتور جستجوگر اینترنتی هوشمند است و میتوانید آخرین اخبار جمع آوری شده از سایت های خبری را در آن ببینید@endsection
+
 @section('content')
     @foreach($categories as $category)
     <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">

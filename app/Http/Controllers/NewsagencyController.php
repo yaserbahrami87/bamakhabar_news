@@ -46,7 +46,8 @@ class NewsagencyController extends Controller
      */
     public function show(newsagency $newsagency)
     {
-        //
+        return view('newsagency')
+                ->with('newsagency',$newsagency);
     }
 
     /**

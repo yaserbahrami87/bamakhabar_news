@@ -13,7 +13,7 @@ class newsagency extends Model
 
     public function source()
     {
-        return $this->hasMany('App/Source');
+        return $this->hasMany('App\Source');
     }
 
 
