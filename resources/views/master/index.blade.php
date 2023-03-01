@@ -28,11 +28,11 @@
                         <p>مهمترین اخبار</p>
                     </div>
                     <ul>
-{{--                        @foreach($news as $item)--}}
-{{--                        <div>--}}
-{{--                            <li><span> {{$item->title}} &ndash; <a href="/news/{{$item->shortlink}}">ادامه خبر</a></span></li>--}}
-{{--                        </div>--}}
-{{--                        @endforeach--}}
+                        @foreach($news_special as $special)
+                        <div>
+                            <li><span> {{$special->title}} &ndash; <a href="/news/{{$special->shortlink}}">ادامه خبر</a></span></li>
+                        </div>
+                        @endforeach
                     </ul>
                 </div>
             </div>

@@ -507,6 +507,7 @@ class ComposerStaticInit5b52f443dde93f9a31b541ee07f439bf
         'App\\Http\\Controllers\\CategoryController' => __DIR__ . '/../..' . '/app/Http/Controllers/CategoryController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+        'App\\Http\\Controllers\\IndexController' => __DIR__ . '/../..' . '/app/Http/Controllers/IndexController.php',
         'App\\Http\\Controllers\\NewsController' => __DIR__ . '/../..' . '/app/Http/Controllers/NewsController.php',
         'App\\Http\\Controllers\\NewsagencyController' => __DIR__ . '/../..' . '/app/Http/Controllers/NewsagencyController.php',
         'App\\Http\\Controllers\\SourceController' => __DIR__ . '/../..' . '/app/Http/Controllers/SourceController.php',
