@@ -9,40 +9,18 @@
             <i class="fa fa-home"></i>
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/category/سیاسی" >سیاسی</a>
-          <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div> -->
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/category/اقتصادی">اقتصادی</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/category/ورزشی">ورزشی</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/category/فرهنگی">فرهنگی</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link" href="/category/اجتماعی">اجتماعی</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/category/بین الملل">بین الملل</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/category/سلامت">سلامت</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/category/حوادث">حوادث</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/category/علم و فناوری">علم و فناوری</a>
-        </li>
 
+        @foreach($categories_navbar as $categoryItem)
+            <li class="nav-item">
+              <a class="nav-link" href="/category/{{$categoryItem->category}}" >{{$categoryItem->category}}</a>
+              <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div> -->
+            </li>
+        @endforeach
       </ul>
       <form class="form-inline my-2 my-lg-0" method="get" action="/search">
         <div class="input-group">

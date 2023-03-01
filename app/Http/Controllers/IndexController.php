@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\news;
+use Hekmatinasser\Verta\Verta;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
@@ -21,7 +22,6 @@ class IndexController extends Controller
 
         $categories=Category::where('status','=',1)
                     ->get();
-
 
 
         return view('welcome')

@@ -77,6 +77,8 @@ class NewsController extends Controller
      */
     public function show(news $news)
     {
+        $news->views++;
+        $news->save();
         return view('single')
                 ->with('news',$news);
     }
@@ -154,7 +156,7 @@ class NewsController extends Controller
 
             $news=news::where('title','=',$datum->get_title())
                 ->get();
-            dd($datum->get_description());
+            dd($datum->get_enclosures()[0]->link);
             if($datum->get_enclosures()[0]->link)
             {
                 $file=$datum->get_enclosures()[0]->link;
