@@ -8,7 +8,7 @@
     font-weight: normal;
 }
 
-*
+*,h1
 {
     font-family: 'iransans';
     font-size: 14px;
@@ -66,14 +66,14 @@ header
 #navbar_row ul.navbar-nav li:last-child
 {
     border-left: none;
-} 
+}
 
 #navbarSupportedContent .nav-item
 {
     font-weight: bold;
 }
 
-#navbarSupportedContent .nav-item a 
+#navbarSupportedContent .nav-item a
 {
     color: #000;
     text-align:center;
@@ -97,7 +97,7 @@ header
     background-color:#5b5b5b;
     color: #ffffff;
     border: 1px solid #5b5b5b;
-} 
+}
 
 #navbarSupportedContent > form input::placeholder
 {
@@ -148,7 +148,7 @@ header
     text-align: justify;
 }
 
-.header_news 
+.header_news
 {
     border: 1px solid #00cccc;
     margin-bottom: 5px;
@@ -209,7 +209,7 @@ header
 
 footer
 {
-    
+
     background-image: url(../images/footer.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -255,8 +255,8 @@ footer > section:nth-child(2) p
     }
 }
 
-@media (min-width: 576px) and (max-width: 767.98px) 
-{ 
+@media (min-width: 576px) and (max-width: 767.98px)
+{
     footer > section:nth-child(1) img
     {
         margin-top: 100px;
@@ -280,7 +280,7 @@ footer > section:nth-child(2) p
     }
 }
 
-@media (min-width: 768px) and (max-width: 991.98px) 
+@media (min-width: 768px) and (max-width: 991.98px)
 {
     footer > section:nth-child(1) img
     {
@@ -293,13 +293,13 @@ footer > section:nth-child(2) p
         font-size: 12px;
         padding: 0px;
         margin: 0px;
-        
+
     }
 
     footer > section:nth-child(2) p,footer > section:nth-child(2) a
     {
         margin: 0px;
-        padding: 0px;        
+        padding: 0px;
         font-size: 12px;
     }
 
@@ -335,7 +335,7 @@ footer > section:nth-child(2) p
     {
         padding-right: 0px;
         text-align: right;
-    } 
+    }
 
     footer > section:nth-child(1) img
     {
@@ -352,7 +352,7 @@ footer > section:nth-child(2) p
     footer > section:nth-child(2) p,footer > section:nth-child(2) a
     {
         margin: 0px;
-        padding: 0px;        
+        padding: 0px;
     }
 
     footer > section:nth-child(2)
@@ -362,12 +362,12 @@ footer > section:nth-child(2) p
 
 }
 
-@media (min-width: 992px) and (max-width: 1199.98px) 
+@media (min-width: 992px) and (max-width: 1199.98px)
     {
         #navbarSupportedContent .nav-item a
         {
             font-size: 11px;
-        }   
+        }
     }
 
 #single_advertising
