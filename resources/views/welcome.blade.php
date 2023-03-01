@@ -27,8 +27,9 @@
                                 <a href="/news/{{$item->shortlink}}" title="{{$item->title}}" >{{$item->title}}</a>
                             </h2>
                             <div class="row">
+
                                 <div class="col-6 col-sm-4 col-md-8 col-lg-4 col-xl-4">
-                                    <p class="d-inline"> نمدونم قبل</p>
+                                    <p class="d-inline"> {{$item->diff()}} قبل</p>
                                     <li class="fas fa-clock"></li>
                                 </div>
                                 <div class="col-6  col-sm-4 col-md-4 col-lg-4 col-xl-4">

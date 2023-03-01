@@ -18,7 +18,7 @@
                                 </a>
                             </div>
                             <div class="card-footer">
-                                <small class="text-muted">{{$item->date}} پیش</small>
+                                <small class="text-muted">{{$item->diff()}} قبل</small>
                                 <a href="/newsagency/{{$item->source->newsAgancy->newsagency}}">  <small class="text-muted">{{$item->source->newsAgancy->newsagency}}  </small> </a>
                             </div>
                         </div>
