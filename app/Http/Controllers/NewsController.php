@@ -140,7 +140,8 @@ class NewsController extends Controller
             $item->shortlink=str_replace('/','-',$item->shortlink);
             $item->save();
         }
-        return $news->count()." LINK OK";
+        alert()->success($news->count()." LINK OK")->persistent('بستن');
+        return back();
     }
 
     public function test_link()

@@ -6,3 +6,5 @@ Route::get('/test',function()
 });
 
 Route::resource('user','UserController');
+
+Route::get('/panel','PanelController@index');

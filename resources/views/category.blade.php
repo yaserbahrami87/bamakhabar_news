@@ -51,31 +51,28 @@
             <div class="card">
                 <a href="/category/{{$category->category}}">پربازدیدهای  {{$category->category}}</a>
                 <div class="header_news col-12"></div>
-{{--                @foreach ($dataViews as $item)--}}
-{{--                    <?php--}}
-{{--                    $images=explode(",",$item->images);--}}
-{{--                    ?>--}}
-{{--                    <article class="col-12 p-0">--}}
-{{--                        <div class="media">--}}
-{{--                            <img src="{{asset('/images/news/'.$images[1])}}"  class="align-self-top mr-3" alt="..." width="130px" height="65px" />--}}
-{{--                            <div class="media-body ">--}}
-{{--                                <h2 class="mt-0">--}}
-{{--                                    <a href="/news/{{$item->shortlink}}" title="{{$item->title}}" >{{$item->title}}</a>--}}
-{{--                                </h2>--}}
-{{--                                <div class="row">--}}
-{{--                                    <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">--}}
-{{--                                        <p class="d-inline">{{$item->date}}قبل</p>--}}
-{{--                                        <li class="fas fa-clock"></li>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">--}}
-{{--                                        <p class="d-inline"> {{$item->views}}</p>--}}
-{{--                                        <li class="fa fa-eye"></li>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </article>--}}
-{{--                @endforeach--}}
+                @foreach ($category->news()->orderby('views','desc')->take(12) as $item)
+                    <article class="col-12 p-0">
+                        <div class="media">
+                            <img src="{{$item->img_thumbnail}}"  class="align-self-top mr-3" alt="..." width="130px" height="65px" />
+                            <div class="media-body ">
+                                <h2 class="mt-0">
+                                    <a href="/news/{{$item->shortlink}}" title="{{$item->title}}" >{{$item->title}}</a>
+                                </h2>
+                                <div class="row">
+                                    <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                        <p class="d-inline">{{$item->diff()}} قبل</p>
+                                        <li class="fas fa-clock"></li>
+                                    </div>
+                                    <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                        <p class="d-inline"> {{$item->views}}</p>
+                                        <li class="fa fa-eye"></li>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                @endforeach
             </div>
         </div>
 
