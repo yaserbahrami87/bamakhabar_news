@@ -36,6 +36,9 @@
 </head>
 <body class="hold-transition sidebar-mini">
 @include('sweetalert::alert')
+<script src="/vendor/sweetalert/sweetalert.all.js"></script>
+
+
 
 <div class="wrapper">
 
