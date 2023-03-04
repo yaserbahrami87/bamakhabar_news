@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Category;
 use App\news;
+use Hekmatinasser\Verta\Verta;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 
@@ -26,6 +27,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $dateNow=Verta::now()->formatDate();
+        $dateNow=str_replace('-','/',$dateNow);
+        View::share('dateNow',$dateNow);
+
         $categories=Category::where('status','=',1)
                         ->get();
 
