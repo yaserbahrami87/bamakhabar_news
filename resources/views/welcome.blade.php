@@ -5,6 +5,11 @@
 @section('description')   باماخبر سایت هوشمند خبری است که دارای موتور جستجوگر اینترنتی هوشمند است و میتوانید آخرین اخبار جمع آوری شده از سایت های خبری را در آن ببینید@endsection
 
 @section('content')
+    <div class="col-12">
+        <div class="card" >
+            <div id="pos-article-display-13739"></div>
+        </div>
+    </div>
     @foreach($categories as $category)
     <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
         <div class="card">
@@ -66,12 +71,12 @@
             @endforeach
             <a class="btn btn-primary btn-lg btn-block" href="/category/{{$category->category}}" role="button">آرشیو اخبار {{$category->category}}</a>
         </div>
-        <!--
-        <div class="card" >
-            <div id='mediaad-qpMn'></div>
-        </div>
-        -->
+
+
+
     </div>
+
     @endforeach
+
 
 @endsection

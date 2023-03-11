@@ -4,6 +4,9 @@
 @section('description'){{$news->description}}@endsection
 
 @section('content')
+    <div class="col-12">
+        <div id="pos-article-display-13736"></div>
+    </div>
     <div class="col-12" id="single_advertising">
     </div>
     <iframe class="col-12" src="{{$news->link_source}}" height="1000px"></iframe>
