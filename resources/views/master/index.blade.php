@@ -19,7 +19,10 @@
     <link href="{{asset('css/ticker.css')}}" rel="stylesheet" />
   </head>
   <body>
-    <main class="container-fluid">
+  @include('sweetalert::alert')
+  <script src="/vendor/sweetalert/sweetalert.all.js"></script>
+
+  <main class="container-fluid">
         @include('master.header')
         @include('master.navbarTop')
 

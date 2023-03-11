@@ -65,7 +65,7 @@
                 },
                 "info" : true,
                 "paging": true,
-                "lengthChange": true,
+                "lengthChange": false,
                 "searching": true,
                 "ordering": true,
                 "autoWidth": false,

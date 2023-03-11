@@ -30,7 +30,7 @@
   <link rel="stylesheet" href="/admin/dist/css/bootstrap-rtl.min.css">
   <!-- template rtl version -->
   <link rel="stylesheet" href="/admin/dist/css/custom-style.css">
-    @yield('headerScript')
+  @yield('headerScript')
 
 
 
