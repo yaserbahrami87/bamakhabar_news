@@ -11,6 +11,9 @@
             <a href="/category/{{$category->category}}">{{$category->category}}</a>
             <div class="header_news col-12"></div>
             <div class="row">
+                <div class="col-12">
+                    <div id="pos-article-display-13736"></div>
+                </div>
                 @foreach($category->news()->paginate(12) as $item)
 
                     <div class="col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 mb-3">

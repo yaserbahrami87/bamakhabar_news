@@ -8,6 +8,9 @@
             <a href="">نتایج جستجوی "{{$search}}"</a>
             <div class="header_news col-12"></div>
             <div class="row">
+                <div class="col-12">
+                    <div id="pos-article-display-13736"></div>
+                </div>
                 @foreach($news as $item)
                     <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 mb-3">
                         <div class="card h-100">
