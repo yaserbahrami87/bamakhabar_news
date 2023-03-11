@@ -15,7 +15,7 @@
                             <div class="card-body">
                                 <a href="/news/{{$item->shortlink}}">
                                     <h5 class="card-title">
-                                        <b>{{$item->title}}</b>
+                                        <b>{!! $item->title !!}</b>
                                     </h5>
                                 </a>
                                 @auth
