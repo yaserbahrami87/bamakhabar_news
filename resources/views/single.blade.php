@@ -1,5 +1,5 @@
 @extends('master.index')
-@section('title'){!! $item->title !!}@endsection
+@section('title'){{$news->title}}@endsection
 
 @section('description'){{$news->description}}@endsection
 
