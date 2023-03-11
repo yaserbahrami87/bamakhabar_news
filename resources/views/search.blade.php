@@ -14,8 +14,29 @@
                             <img src="{{$item->img_thumbnail}}" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <a href="/news/{{$item->shortlink}}">
-                                    <h5 class="card-title">{{$item->title}}</h5>
+                                    <h5 class="card-title">
+                                        <b>{{$item->title}}</b>
+                                    </h5>
                                 </a>
+                                @auth
+                                    @if(Auth::user()->is_admin==1)
+                                        <form method="POST" action="{{ route('admin.newsSpecial-store',$item->shortlink) }}">
+                                            {{csrf_field()}}
+                                            @if($item->special==1)
+                                                <input type="hidden" value="0" name="special" />
+                                                <button type="submit" class="btn">
+                                                    <i class="bi bi-bookmark-fill"></i>
+                                                </button>
+                                            @else
+                                                <input type="hidden" value="1" name="special" />
+                                                <button type="submit" class="btn">
+                                                    <i class="bi bi-bookmark"></i>
+                                                </button>
+                                            @endif
+                                        </form>
+                                    @endif
+                                @endauth
+
                             </div>
                             <div class="card-footer">
                                 <small class="text-muted">{{$item->diff()}} قبل</small>

@@ -28,6 +28,24 @@
                                     <b>{{$item->title}}</b>
                                 </a>
                             </h2>
+                            @auth
+                                @if(Auth::user()->is_admin==1)
+                                    <form method="POST" action="{{ route('admin.newsSpecial-store',$item->shortlink) }}">
+                                        {{csrf_field()}}
+                                        @if($item->special==1)
+                                            <input type="hidden" value="0" name="special" />
+                                            <button type="submit" class="btn">
+                                                <i class="bi bi-bookmark-fill"></i>
+                                            </button>
+                                        @else
+                                            <input type="hidden" value="1" name="special" />
+                                            <button type="submit" class="btn">
+                                                <i class="bi bi-bookmark"></i>
+                                            </button>
+                                        @endif
+                                    </form>
+                                @endif
+                            @endauth
                             <div class="row">
 
                                 <div class="col-6 col-sm-4 col-md-8 col-lg-4 col-xl-4">

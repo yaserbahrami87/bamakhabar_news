@@ -30,6 +30,7 @@
   <link rel="stylesheet" href="/admin/dist/css/bootstrap-rtl.min.css">
   <!-- template rtl version -->
   <link rel="stylesheet" href="/admin/dist/css/custom-style.css">
+    @yield('headerScript')
 
 
 
@@ -249,5 +250,6 @@
 <script src="/admin/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="/admin/dist/js/demo.js"></script>
+@yield('footerScript')
 </body>
 </html>

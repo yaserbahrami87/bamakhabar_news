@@ -12,7 +12,9 @@
     <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('css/bootstrap-rtl.min.css')}}" rel="stylesheet" />
     <link href="{{asset('fonts/fontawesome/css/all.css')}}"  rel="stylesheet"/>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link href="{{asset('css/style.css')}}" rel="stylesheet" />
+
 
     <link href="{{asset('css/ticker.css')}}" rel="stylesheet" />
   </head>

@@ -24,12 +24,29 @@
                                 <a href="/news/{{$item->shortlink}}">
                                     <h5 class="card-title">{{$item->title}}</h5>
                                 </a>
+                                @auth
+                                    @if(Auth::user()->is_admin==1)
+                                        <form method="POST" action="{{ route('admin.newsSpecial-store',$item->shortlink) }}" class="form-inline">
+                                            {{csrf_field()}}
+                                            @if($item->special==1)
+                                                <input type="hidden" value="0" name="special" />
+                                                <button type="submit" class="btn">
+                                                    <i class="bi bi-bookmark-fill"></i>
+                                                </button>
+                                            @else
+                                                <input type="hidden" value="1" name="special" />
+                                                <button type="submit" class="btn">
+                                                    <i class="bi bi-bookmark"></i>
+                                                </button>
+                                            @endif
+                                        </form>
+                                @endif
+                            @endauth
                                 <!-- <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
                             </div>
                             <div class="card-footer">
                                 <small class="text-muted">{{$item->diff()}} قبل</small>
                                 <a href="/newsagency/{{$item->source->newsAgancy->newsagency}}">  <small class="text-muted">{{$item->source->newsAgancy->newsagency}}  </small> </a>
-
                             </div>
                         </div>
                     </div>

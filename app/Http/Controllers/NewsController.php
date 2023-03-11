@@ -125,7 +125,9 @@ class NewsController extends Controller
        $news=news::orwhere('title','like',"%$request->q%")
                 ->orwhere('content','like',"%$request->q%")
                 ->orderby('id','desc')
-                ->paginate();
+                ->paginate(16);
+
+       $news->appends(['q' => $request['q']]);
        return view('search')
                     ->with('news',$news)
                     ->with('search',$request->q);
