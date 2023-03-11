@@ -21,7 +21,7 @@
                                 <img src="{{$item->img_thumbnail}}" class="card-img-top" alt="{{$item->title}}">
                             @endif
                             <div class="card-body">
-                                <a href="/news/{!! $item->shortlink !!}">
+                                <a href="/news/{{$item->shortlink}}">
                                     <h5 class="card-title">{{$item->title}}</h5>
                                 </a>
                                 @auth

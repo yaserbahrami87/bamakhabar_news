@@ -25,7 +25,7 @@
                         <div class="media-body ">
                             <h2 class="mt-0">
                                 <a href="/news/{{$item->shortlink}}" title="{{$item->title}}" >
-                                    <b>{!! $item->title !!}</b>
+                                    <b>{{$item->title}}</b>
                                 </a>
                             </h2>
                             @auth
