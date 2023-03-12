@@ -38,6 +38,7 @@ class AppServiceProvider extends ServiceProvider
 
         $news_special=news::where('special','=',1)
                     ->orderby('id','desc')
+                    ->limit(10)
                     ->get();
         View::share('news_special',$news_special);
     }
