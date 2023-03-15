@@ -21,6 +21,9 @@
               </div> -->
             </li>
         @endforeach
+          <li class="nav-item">
+              <a class="nav-link" href="https://zarinp.al/yaserbahrami" target="_blank">حمایت مالی</a>
+          </li>
       </ul>
       <form class="form-inline my-2 my-lg-0" method="get" action="/search">
         <div class="input-group">
