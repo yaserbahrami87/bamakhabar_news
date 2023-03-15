@@ -22,9 +22,10 @@
             </li>
         @endforeach
           <li class="nav-item">
-              <a class="nav-link" href="https://zarinp.al/yaserbahrami" target="_blank">حمایت مالی</a>
+              <a href="" class="nav-link" data-toggle="modal" data-target="#financialModal"  >حمایت مالی</a>
           </li>
       </ul>
+
       <form class="form-inline my-2 my-lg-0" method="get" action="/search">
         <div class="input-group">
           @if($errors->has('q'))
@@ -41,3 +42,24 @@
 
     </div>
 </nav>
+<!-- Modal -->
+<div class="modal fade" id="financialModal" tabindex="-1" aria-labelledby="financialModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">حمایت مالی</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" dir="rtl">
+                <p>شماره کارت جهت حمایت مالی: <b>5041721078935559</b> بانک رسالت به نام <u>یاسر بهرامی</u></p>
+                <a href="https://zarinp.al/yaserbahrami" target="_blank" class="btn btn-primary">واریز مستقیم</a>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
