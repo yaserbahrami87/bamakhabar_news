@@ -1,0 +1,1 @@
+importScripts('https://van.najva.com/static/js/scripts/bamakhabar-website-19147-54d2c3d6-c7cb-4a86-b5cd-abacdcb9248c-service-worker.js');
