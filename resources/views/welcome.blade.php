@@ -72,7 +72,7 @@
                 @endforeach
                 <a class="btn btn-primary btn-lg btn-block" href="/category/{{$category->category}}" role="button">آرشیو اخبار {{$category->category}}</a>
             </div>
-            <div id="pos-article-display-card-81164"></div>
+
         </div>
     @endforeach
 

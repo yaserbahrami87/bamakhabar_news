@@ -88,5 +88,6 @@
 {{--                @endforeach--}}
             </div>
         </div>
+        <div id="pos-article-display-card-81164"></div>
     </div>
 @endsection
