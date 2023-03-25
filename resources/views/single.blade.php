@@ -14,9 +14,9 @@
             <div class="card-body">
                 <div class="media">
                     @if(is_null($news->img_thumbnail))
-                        <img src="{{asset('/images/news/noImage.jpg')}}"  class="mr-3" title="{{$news->title}}" alt="{{$news->title}}" width="170px" />
+                        <img src="{{asset('/images/news/noImage.jpg')}}"  class="mr-3" title="{{$news->title}}" alt="{{$news->title}}" width="130px" />
                     @else
-                        <img src="{{$news->img_thumbnail}}"  class="mr-3" title="{{$news->title}}" alt="{{$news->title}}" width="170px" />
+                        <img src="{{$news->img_thumbnail}}"  class="mr-3" title="{{$news->title}}" alt="{{$news->title}}" width="130px" />
                     @endif
 
                     <div class="media-body">
