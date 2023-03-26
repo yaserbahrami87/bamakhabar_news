@@ -21,7 +21,7 @@
                         @else
                             <img src="{{$news->img_thumbnail}}"  class="mr-3 mb-3" title="{{$news->title}}" alt="{{$news->title}}" width="130px" />
                         @endif
-                        <h1 class="mt-0">{{$news->title}}</h1>
+                        <h2 class="mt-0">{{$news->title}}</h2>
                         <strong>{{$news->description}}</strong>
                     </div>
                 </div>
