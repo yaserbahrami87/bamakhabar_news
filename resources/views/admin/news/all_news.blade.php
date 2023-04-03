@@ -63,6 +63,9 @@
                         "previous" : "قبلی"
                     }
                 },
+
+
+                "sorting":0,
             });
         });
     </script>
