@@ -2,7 +2,7 @@
 @section('title')اخبار{{$category->category}} باماخبر@endsection
 
 
-@section('description')اخبار{{$category->category}} باماخبر که سایت هوشمند خبری است که دارای موتور جستجوگر اینترنتی هوشمند است و میتوانید آخرین اخبار جمع آوری شده از سایت های خبری را در آن ببینید@endsection
+@section('description')اخبار{{$category->category}} باماخبر که سایت هوشمند خبری است که دارای موتور جستجوگر اخبار اینترنتی هوشمند است و میتوانید آخرین اخبار جمع آوری شده از سایت های خبری را در آن ببینید@endsection
 
 
 @section('content')

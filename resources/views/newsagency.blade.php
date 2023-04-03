@@ -1,7 +1,7 @@
 @extends('master.index')
 @section('title')اخبار {{$newsagency->newsagency}} در باماخبر@endsection
 
-@section('description')اخبار{{$newsagency->newsagency}} در باماخبر که سایت هوشمند خبری است دارای موتور جستجوگر اینترنتی هوشمند@endsection
+@section('description')اخبار{{$newsagency->newsagency}} در باماخبر که سایت هوشمند خبری است دارای موتور جستجوگر اخبار اینترنتی هوشمند@endsection
 
 
 @section('content')
