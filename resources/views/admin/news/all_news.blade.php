@@ -1,7 +1,7 @@
 @extends('admin.master.index')
 @section('headerScript')
     <!-- DataTables -->
-    <link rel="stylesheet" href="../../plugins/datatables/dataTables.bootstrap4.css">
+    <link rel="stylesheet" href="/admin/plugins/datatables/dataTables.bootstrap4.css">
 @endsection
 @section('content')
     <div class="col-12">
@@ -63,13 +63,6 @@
                         "previous" : "قبلی"
                     }
                 },
-                "info" : true,
-                "paging": true,
-                "lengthChange": false,
-                "searching": true,
-                "ordering": true,
-                "autoWidth": false,
-                "sorting":0,
             });
         });
     </script>
