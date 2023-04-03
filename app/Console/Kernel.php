@@ -15,6 +15,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         Commands\deleteNews::class,
+        Commands\repair_shortlink::class,
     ];
 
     /**
@@ -25,8 +26,8 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')->hourly();
         $schedule->command('users:delete')->everyFiveMinutes();
+        $schedule->command('news:repairshortlink')->everyTenMinutes();
     }
 
     /**

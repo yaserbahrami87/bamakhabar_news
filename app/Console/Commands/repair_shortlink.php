@@ -12,14 +12,14 @@ class repair_shortlink extends Command
      *
      * @var string
      */
-    protected $signature = 'news:repair_shortlink';
+    protected $signature = 'news:repairshortlink';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Command repair shortlink news';
 
     /**
      * Create a new command instance.
@@ -38,7 +38,7 @@ class repair_shortlink extends Command
      */
     public function handle()
     {
-        $newsController=New NewsController();
+        $newsController=new NewsController();
         $newsController->repair_shortlink();
     }
 }
