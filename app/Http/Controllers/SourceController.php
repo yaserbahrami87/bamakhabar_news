@@ -109,7 +109,7 @@ class SourceController extends Controller
                 {
                     news::create([
                         'title'         =>$datum->get_title(),
-                        'shortlink'     =>substr($datum->get_title(),0,200),
+                        'shortlink'     =>mb_substr($datum->get_title(),0,200),
                         'link_source'   =>$datum->get_permalink(),
                         'img_thumbnail' =>$datum->get_enclosures()[0]->link,
                         'description'   =>$datum->get_description(),
