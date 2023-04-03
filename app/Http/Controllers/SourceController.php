@@ -108,7 +108,7 @@ class SourceController extends Controller
                 if($news->count()==0)
                 {
                     news::create([
-                        'title'         =>$datum->get_title(),
+                        'title'         =>mb_substr($datum->get_title(),0,200),
                         'shortlink'     =>mb_substr($datum->get_title(),0,200),
                         'link_source'   =>$datum->get_permalink(),
                         'img_thumbnail' =>$datum->get_enclosures()[0]->link,
