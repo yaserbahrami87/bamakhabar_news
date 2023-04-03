@@ -148,7 +148,7 @@ class NewsController extends Controller
 
     public function test_link()
     {
-        $feed =\Feeds::make("https://www.entekhab.ir/fa/rss/9",true);
+        $feed =\Feeds::make("https://www.alef.ir/rss/latest/politics.xml",true);
         $data = array(
             'title'     => $feed->get_title(),
             'permalink' => $feed->get_permalink(),
@@ -159,7 +159,7 @@ class NewsController extends Controller
 
             $news=news::where('title','=',$datum->get_title())
                 ->get();
-            dd($datum->get_enclosures()[0]->link);
+            dd(substr($datum->get_title(),0,200)  );
             if($datum->get_enclosures()[0]->link)
             {
                 $file=$datum->get_enclosures()[0]->link;
