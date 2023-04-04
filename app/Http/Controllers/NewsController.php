@@ -148,7 +148,7 @@ class NewsController extends Controller
 
     public function test_link()
     {
-        $feed =\Feeds::make("https://www.alef.ir/rss/latest/politics.xml",true);
+        $feed =\Feeds::make("https://www.khabaronline.ir/rss/tp/2",true);
         $data = array(
             'title'     => $feed->get_title(),
             'permalink' => $feed->get_permalink(),
@@ -159,7 +159,7 @@ class NewsController extends Controller
 
             $news=news::where('title','=',$datum->get_title())
                 ->get();
-            dd(mb_substr("محمدی گلپایگانی: غم و غصه برای مردم، آقا را پیر کرده / فرزندان ایشان همگی مستاجرند / تنها دارایی ایشان یک خانه در پایین شهر است / ایشان از وجوه شرعی و امکانات نهادهایی مثل بنیاد مستضعفان و ستاد اجرایی مطلقاً در زندگی خود‌ و خانواده‌شان استفاده نمی‌کنند / هزینه زندگی‌شان از محل هدایا و نذوراتی که مقلدین و علاقه‌مندان به شخص ایشان تقدیم می‌کنند، تامین می‌شود",0,200)  );
+            dd(mb_substr($datum->get_description(),0,200)  );
             if($datum->get_enclosures()[0]->link)
             {
                 $file=$datum->get_enclosures()[0]->link;

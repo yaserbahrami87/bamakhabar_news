@@ -102,8 +102,8 @@ class SourceController extends Controller
             foreach ($data['items'] as $datum)
             {
 
-                $news=news::where('title','=',$datum->get_title())
-                    ->get();
+                $news=news::where('title','=',mb_substr($datum->get_title(),0,200))
+                                    ->get();
 
                 if($news->count()==0)
                 {
