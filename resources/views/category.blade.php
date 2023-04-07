@@ -59,6 +59,7 @@
         <div class="row">
             <div class="col-12">
                 <div id='mediaad-BrUF'></div>
+
             </div>
             <div class="col-12">
                 <!-- Pagination -->
@@ -96,6 +97,7 @@
             </div>
         </div>
         <div id="pos-article-display-card-81164"></div>
+        <div id="mediaad-sZVH"></div>
 
     </div>
 @endsection
