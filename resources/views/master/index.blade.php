@@ -29,8 +29,20 @@
       </script>
 
 
+
+      <!--
       <script>
           !function(e,t,n){e.yektanetAnalyticsObject=n,e[n]=e[n]||function(){e[n].q.push(arguments)},e[n].q=e[n].q||[];var a=t.getElementsByTagName("head")[0],r=new Date,c="https://cdn.yektanet.com/superscript/DC3PpRk3/native-bamakhabar.ir-12119/yn_pub.js?v="+r.getFullYear().toString()+"0"+r.getMonth()+"0"+r.getDate()+"0"+r.getHours(),s=t.createElement("link");s.rel="preload",s.as="script",s.href=c,a.appendChild(s);var l=t.createElement("script");l.async=!0,l.src=c,a.appendChild(l)}(window,document,"yektanet");
+      </script>
+      -->
+
+      <script type="text/javascript">
+          const head = document.getElementsByTagName("head")[0];
+          const script = document.createElement("script");
+          script.type = "text/javascript";
+          script.async = true;
+          script.src = "https://s1.mediaad.org/serve/bamakhabar.ir/loader.js";
+          head.appendChild(script);
       </script>
 
   </head>
