@@ -154,12 +154,13 @@ header
     margin-bottom: 5px;
 }
 
-#contents .media h2
+#contents .media h1
 {
     line-height: 30px;
+    font-weight: bold;
 }
 
-#contents .media h2 a
+#contents .media h1 a
 {
     font-size: 13px;
 
