@@ -112,7 +112,11 @@
             <!-- End Contents -->
         </div>
 
-        @include('master.footer')
+        @if(Request::path()==''||Request::path()=='/')
+          @include('master.footer_home')
+        @else
+            @include('master.footer')
+        @endif
     </main>
 
     <!-- Optional JavaScript -->

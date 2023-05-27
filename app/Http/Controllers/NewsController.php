@@ -148,7 +148,7 @@ class NewsController extends Controller
 
     public function test_link()
     {
-        $feed =\Feeds::make("https://www.khabaronline.ir/rss/tp/2",true);
+        $feed =\Feeds::make("https://shahraranews.ir/fa/rss/7",true);
         $data = array(
             'title'     => $feed->get_title(),
             'permalink' => $feed->get_permalink(),

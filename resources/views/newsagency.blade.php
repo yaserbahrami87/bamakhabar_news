@@ -10,7 +10,9 @@
             <a href="/category/{{$newsagency->newsagency}}">{{$newsagency->newsagency}}</a>
             <div class="header_news col-12"></div>
             <div class="row">
+
                 @foreach($newsagency->source as $item)
+
                     @foreach($item->news()->paginate(12) as $news_item)
                         <div class="col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 mb-3">
                             <div class="card h-100">
