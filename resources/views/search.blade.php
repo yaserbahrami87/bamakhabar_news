@@ -14,7 +14,11 @@
                 @foreach($news as $item)
                     <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 mb-3">
                         <div class="card h-100">
-                            <img src="{{$item->img_thumbnail}}" class="card-img-top" alt="...">
+                            @if(is_null($item->img_thumbnail))
+                                <img src="{{asset('/images/news/noImage.jpg')}}" class="card-img-top" alt="...">
+                            @else
+                                <img src="{{$item->img_thumbnail}}" class="card-img-top" alt="...">
+                            @endif
                             <div class="card-body">
                                 <a href="/news/{{$item->shortlink}}">
                                     <h5 class="card-title">
