@@ -17,7 +17,7 @@ class IndexController extends Controller
     public function index()
     {
         $news=news::orderby('id','desc')
-            ->limit(12)
+            ->limit(10)
             ->get();
 
         $categories=Category::where('status','=',1)

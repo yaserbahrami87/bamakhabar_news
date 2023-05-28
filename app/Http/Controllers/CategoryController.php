@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\news;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -47,7 +48,16 @@ class CategoryController extends Controller
     public function show(Category $category)
     {
 
+        $mostViews=news::where('category_id','=',$category->id)
+                        ->orderby('views','desc')
+                        ->limit(12)
+                        ->get();
+
+        //in dastoor baraye blade estefade mishe
+        //$category->news()->orderBy('views','asc')->take(12)->get() as $item
+
         return view('category')
+                ->with('mostViews',$mostViews)
                 ->with('category',$category);
     }
 

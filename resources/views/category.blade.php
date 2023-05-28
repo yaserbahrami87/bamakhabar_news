@@ -6,6 +6,7 @@
 
 
 @section('content')
+
     <div class="col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9" id="categoryNews">
         <div class="card">
             <a href="/category/{{$category->category}}">{{$category->category}}</a>
@@ -72,10 +73,16 @@
             <div class="card">
                 <a href="/category/{{$category->category}}">پربازدیدهای  {{$category->category}}</a>
                 <div class="header_news col-12"></div>
-                @foreach ($category->news()->orderby('views','desc')->take(12) as $item)
+
+                @foreach ($mostViews as $item)
+
                     <article class="col-12 p-0">
                         <div class="media">
-                            <img src="{{$item->img_thumbnail}}"  class="align-self-top mr-3" alt="..." width="130px" height="65px" />
+                            @if(is_null($item->img_thumbnail))
+                                <img src="{{asset('/images/news/noImage.jpg')}}"  class="align-self-top mr-3" alt="..." width="130px" height="65px" />
+                            @else
+                                <img src="{{$item->img_thumbnail}}"  class="align-self-top mr-3" alt="{{$item->title}}" width="130px" height="65px" />
+                            @endif
                             <div class="media-body ">
                                 <h2 class="mt-0">
                                     <a href="/news/{{$item->shortlink}}" title="{{$item->title}}" >{{$item->title}}</a>

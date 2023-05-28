@@ -128,8 +128,12 @@ class NewsController extends Controller
                 ->paginate(16);
 
        $news->appends(['q' => $request['q']]);
+
+       $newsRandom=news::inRandomorder()->limit(12)->get();
+
        return view('search')
                     ->with('news',$news)
+                    ->with('newsRandom',$newsRandom)
                     ->with('search',$request->q);
     }
 

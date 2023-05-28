@@ -40,7 +40,7 @@
             </div>
             <!-- /.card-body -->
             <div class="card-footer">
-                فوتر
+                {{$news->links()}}
             </div>
             <!-- /.card-footer-->
         </div>
@@ -55,18 +55,18 @@
     <script src="/admin/plugins/datatables/jquery.dataTables.js"></script>
     <script src="/admin/plugins/datatables/dataTables.bootstrap4.js"></script>
     <script>
-        $(function () {
-            $('#newsTable').DataTable({
-                "language": {
-                    "paginate": {
-                        "next": "بعدی",
-                        "previous" : "قبلی"
-                    }
-                },
-
-
-                "sorting":0,
-            });
-        });
+        // $(function () {
+        //     $('#newsTable').DataTable({
+        //         "language": {
+        //             "paginate": {
+        //                 "next": "بعدی",
+        //                 "previous" : "قبلی"
+        //             }
+        //         },
+        //
+        //
+        //         "sorting":0,
+        //     });
+        // });
     </script>
 @endsection
